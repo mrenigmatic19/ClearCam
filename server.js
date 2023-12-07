@@ -5,11 +5,7 @@ const path=require("path")
 const multer=require("multer")
 const { exec } = require('child_process')
 
-
-
-const port=8000
-const hostname='127.0.0.1'
-
+const port = process.env.PORT || 5000
 
 const app=express()
 app.use(express.json())

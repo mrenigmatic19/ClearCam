@@ -69,7 +69,7 @@ def deHaze(adress,r = 7,T_threshold = 0.1):
 
 
 if __name__ == '__main__':
-    vidcap = cv2.VideoCapture("D:\\GitHub\\ClearCam\\uploads\\input.mp4")
+    vidcap = cv2.VideoCapture("./uploads/input.mp4")
 
     success, image = vidcap.read()
     count = 1
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     count=1
     for i in pre_imgs:
         i = path+i
-        if(count%8!=0):
+        if(count%1!=0):
             p=mp.Process(target=deHaze,args=[i])
             processes.append(p)
         else:
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         
     count=1
     for i in processes:
-        if(count%8!=0):
+        if(count%1!=0):
             i.start()
         else:
             deHaze(i)

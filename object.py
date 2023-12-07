@@ -1,7 +1,7 @@
 import cv2
 import cvlib as cv
 from cvlib.object_detection import draw_bbox
-vidcap = cv2.VideoCapture("D:\\GitHub\\ClearCam\\uploads\\input.mp4")
+vidcap = cv2.VideoCapture("uploads/input.mp4")
 success=True
 count=0
 while success:

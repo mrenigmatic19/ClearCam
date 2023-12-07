@@ -5,7 +5,7 @@ const path=require("path")
 const multer=require("multer")
 const { exec } = require('child_process')
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3001
 
 const app=express()
 app.use(express.json())
@@ -58,7 +58,7 @@ app.post('/reload',async (req,res)=>{
   
 })
 
-app.listen(port,hostname,()=>{
+app.listen(port,()=>{
     console.log("Server is Running!")
     })
     
